@@ -6,12 +6,10 @@
     <title>BISEN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&family=Franklin+Gothic+Medium&display=swap" rel="stylesheet">
 
     <style>
-        body,
-        html {
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -78,10 +76,7 @@
             transform: translateY(-10px) rotate(-45deg);
         }
 
-        .menu-content,
-        .contact-menu-content,
-        .philosophy-menu-content,
-        .products-menu-content {
+        .menu-content, .contact-menu-content, .philosophy-menu-content, .products-menu-content {
             position: absolute;
             top: 0;
             width: 25%;
@@ -96,16 +91,11 @@
             align-items: center;
         }
 
-        .menu-content.open,
-        .contact-menu-content.open,
-        .philosophy-menu-content.open,
-        .products-menu-content.open {
+        .menu-content.open, .contact-menu-content.open, .philosophy-menu-content.open, .products-menu-content.open {
             height: 100%;
         }
 
-        .menu-content ul,
-        .contact-menu-content ul,
-        .products-menu-content ul {
+        .menu-content ul, .contact-menu-content ul, .products-menu-content ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -114,9 +104,7 @@
             margin: auto 0;
         }
 
-        .menu-content ul li,
-        .contact-menu-content ul li,
-        .products-menu-content ul li {
+        .menu-content ul li, .contact-menu-content ul li, .products-menu-content ul li {
             margin: 42px 0;
             font-size: 26.4px;
             cursor: pointer;
@@ -127,8 +115,7 @@
             text-decoration: none;
         }
 
-        .philosophy-menu-content,
-        .products-menu-content {
+        .philosophy-menu-content, .products-menu-content {
             left: 25%;
             width: 50%;
             padding: 20px;
@@ -137,15 +124,13 @@
             justify-content: center;
         }
 
-        .philosophy-menu-content p,
-        .products-menu-content p {
+        .philosophy-menu-content p, .products-menu-content p {
             font-size: 22.77px;
             font-weight: bold;
             font-style: italic;
         }
 
-        .philosophy-menu-content .highlight,
-        .products-menu-content .highlight {
+        .philosophy-menu-content .highlight, .products-menu-content .highlight {
             font-size: 26.2px;
             text-transform: uppercase;
         }
@@ -208,7 +193,7 @@
             text-align: center;
         }
 
-        /* Мобильные движения далее */
+        /* Мобильные стили */
         @media only screen and (max-width: 768px) {
             .navbar h1 {
                 font-size: 36px;
@@ -218,28 +203,21 @@
                 left: 20px;
             }
 
-            .menu-content,
-            .contact-menu-content,
-            .philosophy-menu-content,
-            .products-menu-content {
+            .menu-content, .contact-menu-content, .philosophy-menu-content, .products-menu-content {
                 width: 100%;
                 left: 0;
             }
 
-            .menu-content ul li,
-            .contact-menu-content ul li,
-            .products-menu-content ul li {
+            .menu-content ul li, .contact-menu-content ul li, .products-menu-content ul li {
                 font-size: 20px;
                 margin: 20px 0;
             }
 
-            .philosophy-menu-content p,
-            .products-menu-content p {
+            .philosophy-menu-content p, .products-menu-content p {
                 font-size: 18px;
             }
 
-            .philosophy-menu-content .highlight,
-            .products-menu-content .highlight {
+            .philosophy-menu-content .highlight, .products-menu-content .highlight {
                 font-size: 20px;
             }
 
@@ -256,9 +234,7 @@
                 font-size: 12px;
             }
 
-            .menu.open span:nth-child(1),
-            .menu.open span:nth-child(2),
-            .menu.open span:nth-child(3) {
+            .menu.open span:nth-child(1), .menu.open span:nth-child(2), .menu.open span:nth-child(3) {
                 transform: none;
                 opacity: 1;
             }
@@ -319,18 +295,18 @@
         <p><span class="highlight">BISEN Exclusive</span> - Impressive improvements designed to create an unforgettable user experience, exclusive color solutions and texture patterns available to professionals already familiar with BISEN products.</p>
     </div>
     <div class="content">
-        <video id="backgroundVideo" class="video-background" autoplay muted loop playsinline>
-        <source src="videosheet.mp4" type="video/mp4">
-        <source src="videosheet.webm" type="video/webm">
-        <source src="videosheet.ogv" type="video/ogg">
-        Your browser does not support the video tag.
+        <video id="backgroundVideo" class="video-background" autoplay muted loop playsinline preload="auto">
+            <source src="videosheet.mp4" type="video/mp4">
+            <source src="videosheet.webm" type="video/webm">
+            <source src="videosheet.ogv" type="video/ogg">
+            Your browser does not support the video tag.
         </video>
         <div class="inactive-text">BISEN — perfection is in the details.</div>
         <button class="contact-button" onclick="toggleMenu('contactMenuContent')">Contact Us</button>
         <div class="copyright-text">© Copyright - Bisen 2024</div>
     </div>
 
-    <script>
+    <script defer>
         function goHome() {
             document.getElementById('menuContent').classList.remove('open');
             document.getElementById('philosophyMenuContent').classList.remove('open');
