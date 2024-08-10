@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BISEN</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&display=swap');
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&display=swap" rel="stylesheet">
 
+    <style>
         body,
         html {
             margin: 0;
@@ -61,7 +63,7 @@
             width: 100%;
             height: 4px;
             background-color: #000;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            transition: transform 0.25s ease, opacity 0.25s ease;
         }
 
         .menu.open span:nth-child(1) {
@@ -86,7 +88,7 @@
             height: 0;
             background-color: rgba(255, 255, 255, 0.8);
             overflow: hidden;
-            transition: height 0.2s ease;
+            transition: height 0.25s ease;
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -320,8 +322,11 @@
         <p><span class="highlight">BISEN Premium</span> - created for those who want to get unique features available only in this extended version. Changing the shape of the steam shaft, unique color solutions, and dozens of other improvements available to the client.</p>
         <p><span class="highlight">BISEN Exclusive</span> - Impressive improvements designed to create an unforgettable user experience, exclusive color solutions and texture patterns available to professionals already familiar with BISEN products.</p>
     </div>
-    <video class="video-background" autoplay muted loop playsinline id="video-background">
+    <video class="video-background" autoplay muted loop playsinline poster="picturebisen.png" id="video-background">
         <source src="videosheet.mp4" type="video/mp4">
+        <source src="videosheet.webm" type="video/webm">
+        <source src="videosheet.ogv" type="video/ogg">
+        Your browser does not support the video tag.
     </video>
     <div class="content">
         <button class="contact-button" onclick="toggleMenu('contactMenuContent')">Contact Us</button>
