@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BISEN</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Franklin+Gothic+Medium&display=swap');
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Franklin+Gothic+Heavy&family=Franklin+Gothic+Medium&display=swap" rel="stylesheet">
 
-        body,
-        html {
+    <style>
+        body, html {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -40,20 +40,16 @@
             cursor: pointer;
         }
 
-        .navbar .menu {
+        .menu {
             position: absolute;
             left: 36px;
             font-size: 36px;
             cursor: pointer;
-        }
-
-        .menu {
             width: 36px;
             height: 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            cursor: pointer;
         }
 
         .menu span {
@@ -82,8 +78,8 @@
         .products-menu-content {
             position: absolute;
             top: 0;
-            width: 25%;
             height: 0;
+            width: 100%;
             background-color: rgba(255, 255, 255, 0.8);
             overflow: hidden;
             transition: height 0.2s ease;
@@ -94,22 +90,14 @@
             align-items: center;
         }
 
-        .menu-content.open,
-        .contact-menu-content.open,
-        .philosophy-menu-content.open,
-        .products-menu-content.open {
-            height: 100%;
-        }
-
         .menu-content ul,
         .contact-menu-content ul,
         .products-menu-content ul {
             list-style-type: none;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
             width: 100%;
             text-align: center;
-            margin: auto 0;
         }
 
         .menu-content ul li,
@@ -125,14 +113,19 @@
             text-decoration: none;
         }
 
+        .menu-content.open,
+        .contact-menu-content.open,
+        .philosophy-menu-content.open,
+        .products-menu-content.open {
+            height: 100%;
+        }
+
         .philosophy-menu-content,
         .products-menu-content {
-            left: 25%;
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
             text-align: center;
             justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .philosophy-menu-content p,
@@ -142,14 +135,13 @@
             font-style: italic;
         }
 
-        .philosophy-menu-content .highlight,
-        .products-menu-content .highlight {
+        .highlight {
             font-size: 26.2px;
             text-transform: uppercase;
         }
 
         .video-background {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -164,6 +156,7 @@
             align-items: center;
             height: 100%;
             position: relative;
+            z-index: 1;
             flex-direction: column;
         }
 
@@ -200,7 +193,6 @@
             text-align: center;
         }
 
-        /* Мобильные движения далее*/
         @media only screen and (max-width: 768px) {
             .navbar h1 {
                 font-size: 36px;
@@ -208,14 +200,6 @@
 
             .menu {
                 left: 20px;
-            }
-
-            .menu-content,
-            .contact-menu-content,
-            .philosophy-menu-content,
-            .products-menu-content {
-                width: 100%;
-                left: 0;
             }
 
             .menu-content ul li,
@@ -230,8 +214,7 @@
                 font-size: 18px;
             }
 
-            .philosophy-menu-content .highlight,
-            .products-menu-content .highlight {
+            .highlight {
                 font-size: 20px;
             }
 
@@ -275,22 +258,12 @@
                 margin: 25px 0;
             }
         }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
     </style>
 </head>
 
 <body>
     <div class="navbar">
-        <div class="menu" id="menuButton" onclick="toggleMenu('menuContent')">
+        <div class="menu" id="menuButton" aria-label="Toggle menu" onclick="toggleMenu('menuContent')">
             <span></span>
             <span></span>
             <span></span>
@@ -320,8 +293,11 @@
         <p><span class="highlight">BISEN Premium</span> - created for those who want to get unique features available only in this extended version. Changing the shape of the steam shaft, unique color solutions, and dozens of other improvements available to the client.</p>
         <p><span class="highlight">BISEN Exclusive</span> - Impressive improvements designed to create an unforgettable user experience, exclusive color solutions and texture patterns available to professionals already familiar with BISEN products.</p>
     </div>
-    <video class="video-background" autoplay muted loop playsinline id="video-background">
+    <video class="video-background" autoplay muted loop playsinline poster="picturebisen.png" id="video-background" aria-label="Background video">
         <source src="videosheet.mp4" type="video/mp4">
+        <source src="videosheet.webm" type="video/webm">
+        <source src="videosheet.ogv" type="video/ogg">
+        Your browser does not support the video tag.
     </video>
     <div class="content">
         <button class="contact-button" onclick="toggleMenu('contactMenuContent')">Contact Us</button>
