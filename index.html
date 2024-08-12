@@ -83,7 +83,7 @@
             top: 0;
             width: 25%;
             height: 0;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.85);
             overflow: hidden;
             transition: height 0.3s ease;
             z-index: 999;
@@ -104,7 +104,7 @@
         .contact-menu-content ul,
         .products-menu-content ul {
             list-style-type: none;
-            padding: 5;
+            padding: 0;
             margin: 0;
             width: 100%;
             text-align: center;
@@ -128,7 +128,7 @@
         .products-menu-content {
             left: 25%;
             width: 50%;
-            padding: 17px;
+            padding: 16px;
             box-sizing: border-box;
             text-align: center;
             justify-content: center;
@@ -143,7 +143,7 @@
 
         .philosophy-menu-content .highlight,
         .products-menu-content .highlight {
-            font-size: 25.5px;
+            font-size: 25px;
             text-transform: uppercase;
         }
 
@@ -321,8 +321,6 @@
     </div>
     <video class="video-background" autoplay muted loop playsinline preload="auto" id="video-background">
         <source src="videosheet.mp4" type="video/mp4">
-        <source src="videosheet.webm" type="video/webm">
-        <source src="videosheet.ogv" type="video/ogg">
         Your browser does not support the video tag.
     </video>
     <div class="content">
@@ -330,7 +328,7 @@
         <div class="inactive-text">BISEN — perfection in details.</div>
     </div>
     <div class="copyright-text">© Copyright - Bisen 2024</div>
-    <script>
+    <script defer>
         function toggleMenu(menuId) {
             const menu = document.querySelector('.menu');
             const menuContent = document.getElementById(menuId);
