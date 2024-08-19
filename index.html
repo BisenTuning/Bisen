@@ -15,10 +15,9 @@
             height: 100%;
             overflow: hidden;
             font-family: 'Franklin Gothic Heavy', Arial, sans-serif;
-            font-weight: 900; /* Increased font weight */
+            font-weight: black;
             font-style: italic;
-            color: rgb(20, 20, 20); /* Dark color */
-            background-color: rgb(210, 210, 210); /* Light background color */
+            color: rgb(20, 20, 20);
         }
 
         .navbar {
@@ -28,9 +27,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: rgb(210, 210, 210); /* Light background color */
+            background-color: #fff;
             padding: 18.144px 32.4px;
-            box-shadow: 0 2px 4px rgba(20, 20, 20, 0.1); /* Dark shadow */
+            box-shadow: 0 2px 4px rgba(20, 20, 20, 0.1);
             z-index: 1000;
         }
 
@@ -38,7 +37,6 @@
             margin: 0;
             font-size: 56.77px;
             cursor: pointer;
-            color: rgb(20, 20, 20); /* Dark color */
         }
 
         .navbar .menu {
@@ -46,7 +44,6 @@
             left: 36px;
             font-size: 36px;
             cursor: pointer;
-            color: rgb(20, 20, 20); /* Dark color */
         }
 
         .menu {
@@ -62,7 +59,7 @@
             display: block;
             width: 100%;
             height: 4px;
-            background-color: rgb(20, 20, 20); /* Dark color */
+            background-color: rgb(20, 20, 20);
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
@@ -86,7 +83,7 @@
             top: 0;
             width: 25%;
             height: 0;
-            background-color: rgba(210, 210, 210, 0.825); /* Light background color */
+            background-color: rgba(255, 255, 255, 0.825);
             overflow: hidden;
             transition: height 0.3s ease;
             z-index: 999;
@@ -120,11 +117,10 @@
             margin: 42px 0;
             font-size: 26.4px;
             cursor: pointer;
-            color: rgb(20, 20, 20); /* Dark color */
         }
 
         .contact-menu-content ul li a {
-            color: rgb(20, 20, 20); /* Dark color */
+            color: #333;
             text-decoration: none;
         }
 
@@ -141,16 +137,14 @@
         .philosophy-menu-content p,
         .products-menu-content p {
             font-size: 22.5px;
-            font-weight: 900; /* Increased font weight */
+            font-weight: black;
             font-style: italic;
-            color: rgb(20, 20, 20); /* Dark color */
         }
 
         .philosophy-menu-content .highlight,
         .products-menu-content .highlight {
             font-size: 23.8px;
             text-transform: uppercase;
-            color: rgb(20, 20, 20); /* Dark color */
         }
 
         .video-background {
@@ -161,7 +155,6 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            background-color: rgb(210, 210, 210); /* Light background color */
         }
 
         .content {
@@ -174,7 +167,7 @@
         }
 
         .contact-button {
-            background-color: rgb(20, 20, 20); /* Dark color */
+            background-color: rgb(160, 35, 35);
             color: white;
             padding: 13.31px 35.38px;
             border: none;
@@ -182,14 +175,14 @@
             font-size: 19.36px;
             cursor: pointer;
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: black;
             font-style: italic;
             margin-top: 20px;
         }
 
         .inactive-text {
-            font-weight: bold;
-            color: rgb(20, 20, 20); /* Dark color */
+            font-weight: black;
+            color: rgb(210, 210, 210);
             cursor: default;
             font-size: 25.6px;
             margin-top: 20px;
@@ -199,13 +192,14 @@
         .copyright-text {
             font-family: 'Franklin Gothic Medium', Arial, sans-serif;
             font-size: 13.5px;
-            color: rgb(20, 20, 20); /* Dark color */
+            color: rgb(210, 210, 210);
             position: absolute;
             bottom: 10px;
             width: 100%;
             text-align: center;
         }
 
+        /* Мобильные движения далее */
         @media only screen and (max-width: 768px) {
             .navbar h1 {
                 font-size: 36px;
@@ -228,19 +222,16 @@
             .products-menu-content ul li {
                 font-size: 20px;
                 margin: 20px 0;
-                color: rgb(20, 20, 20); /* Dark color */
             }
 
             .philosophy-menu-content p,
             .products-menu-content p {
                 font-size: 18px;
-                color: rgb(20, 20, 20); /* Dark color */
             }
 
             .philosophy-menu-content .highlight,
             .products-menu-content .highlight {
                 font-size: 20px;
-                color: rgb(20, 20, 20); /* Dark color */
             }
 
             .contact-button {
@@ -282,6 +273,16 @@
             .products-menu-content ul li {
                 margin: 25px 0;
             }
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
     </style>
 </head>
